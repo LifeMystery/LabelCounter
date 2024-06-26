@@ -1,17 +1,20 @@
-let number = document.getElementById("countLabel");
 
 
-document.getElementById("increaseBtn").onclick = function(){
-    number += 1;
-    document.getElementById("countLabel").textContent = number;
+const decreaseBtn = document.getElementById("decreaseBtn");
+const resetBtn = document.getElementById("resetBtn");
+const increaseBtn = document.getElementById("increaseBtn");
+const countLabel = document.getElementById("countLabel");
+let count = 0;
+
+increaseBtn.onclick = function(){
+    count++;
+    countLabel.textContent = count;
 }
-
-document.getElementById("decreaseBtn").onclick = function(){
-    number -= 1;
-    document.getElementById("countLabel").textContent = number;
+decreaseBtn.onclick = function(){
+    count--;
+    countLabel.textContent = count;
 }
-
-document.getElementById("resetBtn").onclick = function(){
-    number = 0;
-    document.getElementById("countLabel").textContent = number;
+resetBtn.onclick = function(){
+    count = 0;
+    countLabel.textContent = count;
 }
